@@ -23,28 +23,32 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"jack2ee-dev.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jack2ee development blog">
-<meta property="og:url" content="https://jack2ee-dev.github.io/index.html">
+<meta name="description" content="이 글은 W3C(World Wide Web Consortium)의Introduction to Web Accessibility 를 번역한 것이다.  웹 접근성 개요요약웹 사이트와 웹 도구들이 적절히 디자인되고 개발되었다면, 장애를 가진 사람들도 불편함없이 이를 사용할 수 있다. 그러나, 현재 많은 사이트와 도구들은 접근성에 대한 고려없이 개발되어 몇몇 사람">
+<meta property="og:type" content="article">
+<meta property="og:title" content="웹 접근성(Web Accessbility)">
+<meta property="og:url" content="https://jack2ee-dev.github.io/2021/04/20/%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-Web-Accessbility/index.html">
 <meta property="og:site_name" content="Jack2ee development blog">
+<meta property="og:description" content="이 글은 W3C(World Wide Web Consortium)의Introduction to Web Accessibility 를 번역한 것이다.  웹 접근성 개요요약웹 사이트와 웹 도구들이 적절히 디자인되고 개발되었다면, 장애를 가진 사람들도 불편함없이 이를 사용할 수 있다. 그러나, 현재 많은 사이트와 도구들은 접근성에 대한 고려없이 개발되어 몇몇 사람">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-20T10:53:02.000Z">
+<meta property="article:modified_time" content="2021-04-20T12:10:38.419Z">
 <meta property="article:author" content="Jack2ee-dev">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://jack2ee-dev.github.io/">
+<link rel="canonical" href="https://jack2ee-dev.github.io/2021/04/20/%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-Web-Accessbility/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
-<title>Jack2ee development blog</title>
+<title>웹 접근성(Web Accessbility) | Jack2ee development blog</title>
   
 
 
@@ -130,7 +134,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -143,6 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-%EA%B0%9C%EC%9A%94"><span class="nav-number">1.</span> <span class="nav-text">웹 접근성 개요</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9A%94%EC%95%BD"><span class="nav-number">1.1.</span> <span class="nav-text">요약</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AA%A9%EC%B0%A8"><span class="nav-number">1.2.</span> <span class="nav-text">목차</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EB%A7%A5%EC%97%90-%EB%8C%80%ED%95%9C-%EC%A0%91%EA%B7%BC"><span class="nav-number">1.3.</span> <span class="nav-text">문맥에 대한 접근</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80"><span class="nav-number">1.4.</span> <span class="nav-text">웹 접근성이란 무엇인가?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1%EC%9D%80-%EA%B0%9C%EC%9D%B8-%EC%82%B0%EC%97%85-%EC%82%AC%ED%9A%8C%EB%A5%BC-%EC%9D%B4%EB%A1%AD%EA%B2%8C%ED%95%9C%EB%8B%A4"><span class="nav-number">1.5.</span> <span class="nav-text">웹 접근성은 개인, 산업, 사회를 이롭게한다.</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%A0%91%EA%B7%BC%EC%84%B1-%EB%86%92%EC%9D%80-%EC%9B%B9-%EB%A7%8C%EB%93%A4%EA%B8%B0"><span class="nav-number">1.6.</span> <span class="nav-text">접근성 높은 웹 만들기</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%A0%91%EA%B7%BC%EC%84%B1-%EB%86%92%EC%9D%80-%EC%9B%B9-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0"><span class="nav-number">1.6.1.</span> <span class="nav-text">접근성 높은 웹 사이트 구성하기</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%A0%91%EA%B7%BC%EC%84%B1-%ED%8F%89%EA%B0%80%ED%95%98%EA%B8%B0"><span class="nav-number">1.7.</span> <span class="nav-text">접근성 평가하기</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%98%88%EC%8B%9C"><span class="nav-number">1.8.</span> <span class="nav-text">예시</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8C%80%EC%B2%B4-%ED%85%8D%EC%8A%A4%ED%8A%B8"><span class="nav-number">1.8.1.</span> <span class="nav-text">이미지 대체 텍스트</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%ED%82%A4%EB%B3%B4%EB%93%9C-%EC%9E%85%EB%A0%A5"><span class="nav-number">1.8.2.</span> <span class="nav-text">키보드 입력</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EC%98%A4%EB%94%94%EC%98%A4%EB%A5%BC-%EC%9C%84%ED%95%9C-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EC%A0%95%EB%B3%B4"><span class="nav-number">1.8.3.</span> <span class="nav-text">오디오를 위한 텍스트 정보</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%9D%B4%EC%99%B8"><span class="nav-number">1.9.</span> <span class="nav-text">이외</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -184,16 +189,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://jack2ee-dev.github.io/2021/04/20/%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-Web-Accessbility/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -206,9 +212,9 @@
       <meta itemprop="name" content="Jack2ee development blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/20/%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-Web-Accessbility/" class="post-title-link" itemprop="url">웹 접근성(Web Accessbility)</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          웹 접근성(Web Accessbility)
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -232,7 +238,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <blockquote>
+        <blockquote>
 <p>이 글은 W3C(World Wide Web Consortium)의<br><a target="_blank" rel="noopener" href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">Introduction to Web Accessibility</a> 를 번역한 것이다.</p>
 </blockquote>
 <h1 id="웹-접근성-개요"><a href="#웹-접근성-개요" class="headerlink" title="웹 접근성 개요"></a>웹 접근성 개요</h1><h2 id="요약"><a href="#요약" class="headerlink" title="요약"></a>요약</h2><p>웹 사이트와 웹 도구들이 적절히 디자인되고 개발되었다면, 장애를 가진 사람들도 불편함없이 이를 사용할 수 있다. 그러나, 현재 많은 사이트와 도구들은 접근성에 대한 고려없이 개발되어 몇몇 사람들이 쉽게 사용할 수 없는 것이 현실이다. 접근성 높은 웹을 만드는 것은 개인과 산업 그리고 사회 전반을 이롭게한다. 국제 웹 표준은 이와 같은 접근성에 필요한 것들을 정의한다.</p>
@@ -295,7 +301,6 @@
 <p>웹 사이트가 텍스트 정보를 제공하는 것은 쉽고 많은 수고가 필요없다. 또한 텍스트 정보를 HTML 형식으로 변경해주는 서비스도 있다.</p>
 <h2 id="이외"><a href="#이외" class="headerlink" title="이외"></a>이외</h2><p>W3C WAI는 접근성 <a target="_blank" rel="noopener" href="https://www.w3.org/WAI/standards-guidelines/">표준</a>, <a target="_blank" rel="noopener" href="https://www.w3.org/WAI/teach-advocate/">교육</a>, <a target="_blank" rel="noopener" href="https://www.w3.org/WAI/test-evaluate/">테스트/평가</a>, <a target="_blank" rel="noopener" href="https://www.w3.org/WAI/planning/">프로젝트 관리 그리고 정책</a>에 대한 다양한 방면의 자원을 지원한다. 우리는 당신이 이 웹사이트를 보고, WAI Resources를 읽어보기를 바란다.</p>
 
-      
     </div>
 
     
@@ -303,154 +308,22 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/25/My-very-new-github-blog/" rel="prev" title="My very new github blog">
+                  <i class="fa fa-chevron-left"></i> My very new github blog
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://jack2ee-dev.github.io/2021/03/25/My-very-new-github-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jack2ee-dev">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jack2ee development blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/25/My-very-new-github-blog/" class="post-title-link" itemprop="url">My very new github blog</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-03-25 16:31:12 / Modified: 16:33:51" itemprop="dateCreated datePublished" datetime="2021-03-25T16:31:12+09:00">2021-03-25</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Hello there! I’m Jack2ee</p>
-<p>I wanna be a good programmer</p>
-<p>Please keep looking my blog!</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://jack2ee-dev.github.io/2021/03/25/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jack2ee-dev">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jack2ee development blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/25/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-03-25 16:26:46" itemprop="dateCreated datePublished" datetime="2021-03-25T16:26:46+09:00">2021-03-25</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
