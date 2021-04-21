@@ -23,28 +23,32 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"jack2ee-dev.github.io","root":"/","images":"/images","scheme":"Muse","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta property="og:type" content="website">
-<meta property="og:title" content="Jack2ee development blog">
-<meta property="og:url" content="https://jack2ee-dev.github.io/index.html">
+<meta name="description" content="이 글은 TCP SCHOOL.com의 ‘DTD 개요’ 를 참고하여 정리한 글이다.  DTD 개요 스키마(schema)XML(eXtensible Markup Language)은 다른 마크업 언어를 만드는데 사용되는 다목적 마크업 언어이다.다른 언어를 정의하기 위해서는 목적이 되는 언어가 필요로 하는 요소와 속성을 파악해야만 한다.이러한 정보들의 집합을 스키">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DTD 개요">
+<meta property="og:url" content="https://jack2ee-dev.github.io/2021/04/20/DTD-%EA%B0%9C%EC%9A%94/index.html">
 <meta property="og:site_name" content="Jack2ee development blog">
+<meta property="og:description" content="이 글은 TCP SCHOOL.com의 ‘DTD 개요’ 를 참고하여 정리한 글이다.  DTD 개요 스키마(schema)XML(eXtensible Markup Language)은 다른 마크업 언어를 만드는데 사용되는 다목적 마크업 언어이다.다른 언어를 정의하기 위해서는 목적이 되는 언어가 필요로 하는 요소와 속성을 파악해야만 한다.이러한 정보들의 집합을 스키">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-04-20T12:23:30.000Z">
+<meta property="article:modified_time" content="2021-04-21T01:13:43.284Z">
 <meta property="article:author" content="Jack2ee-dev">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://jack2ee-dev.github.io/">
+<link rel="canonical" href="https://jack2ee-dev.github.io/2021/04/20/DTD-%EA%B0%9C%EC%9A%94/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
-<title>Jack2ee development blog</title>
+<title>DTD 개요 | Jack2ee development blog</title>
   
 
 
@@ -130,7 +134,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -143,6 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DTD-%EA%B0%9C%EC%9A%94"><span class="nav-number">1.</span> <span class="nav-text">DTD 개요</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EC%8A%A4%ED%82%A4%EB%A7%88-schema"><span class="nav-number">1.1.</span> <span class="nav-text">스키마(schema)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EB%AC%B8%EC%84%9C-%ED%83%80%EC%9E%85-%EC%A0%95%EC%9D%98-DTD-%EB%9E%80"><span class="nav-number">1.2.</span> <span class="nav-text">문서 타입 정의(DTD)란?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DTD%EC%9D%98-%EC%82%AC%EC%9A%A9-%EB%AA%A9%EC%A0%81"><span class="nav-number">1.3.</span> <span class="nav-text">DTD의 사용 목적</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DTD-%EB%AC%B8%EB%B2%95"><span class="nav-number">1.4.</span> <span class="nav-text">DTD 문법</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DTD-%EB%82%B4%EB%B6%80-%EC%84%9C%EB%B8%8C%EC%85%8B-subset"><span class="nav-number">1.5.</span> <span class="nav-text">DTD 내부 서브셋(subset)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DTD-%EC%99%B8%EB%B6%80-%EC%84%9C%EB%B8%8C%EC%85%8B-subset"><span class="nav-number">1.6.</span> <span class="nav-text">DTD 외부 서브셋(subset)</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -184,16 +189,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://jack2ee-dev.github.io/2021/04/20/DTD-%EA%B0%9C%EC%9A%94/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -206,9 +212,9 @@
       <meta itemprop="name" content="Jack2ee development blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/20/DTD-%EA%B0%9C%EC%9A%94/" class="post-title-link" itemprop="url">DTD 개요</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          DTD 개요
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -238,7 +244,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <blockquote>
+        <blockquote>
 <p>이 글은 <a target="_blank" rel="noopener" href="http://www.tcpschool.com/xml/xml_dtd_intro">TCP SCHOOL.com의 ‘DTD 개요’</a> 를 참고하여 정리한 글이다.</p>
 </blockquote>
 <h1 id="DTD-개요"><a href="#DTD-개요" class="headerlink" title="DTD 개요"></a>DTD 개요</h1><hr>
@@ -277,7 +283,6 @@
 </blockquote>
 <hr>
 
-      
     </div>
 
     
@@ -285,213 +290,22 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/04/20/%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-Web-Accessbility/" rel="prev" title="웹 접근성(Web Accessbility)">
+                  <i class="fa fa-chevron-left"></i> 웹 접근성(Web Accessbility)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://jack2ee-dev.github.io/2021/04/20/%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-Web-Accessbility/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jack2ee-dev">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jack2ee development blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/04/20/%EC%9B%B9-%EC%A0%91%EA%B7%BC%EC%84%B1-Web-Accessbility/" class="post-title-link" itemprop="url">웹 접근성(Web Accessbility)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-04-20 19:53:02 / Modified: 21:10:38" itemprop="dateCreated datePublished" datetime="2021-04-20T19:53:02+09:00">2021-04-20</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>이 글은 W3C(World Wide Web Consortium)의<br><a target="_blank" rel="noopener" href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">Introduction to Web Accessibility</a> 를 번역한 것이다.</p>
-</blockquote>
-<h1 id="웹-접근성-개요"><a href="#웹-접근성-개요" class="headerlink" title="웹 접근성 개요"></a>웹 접근성 개요</h1><h2 id="요약"><a href="#요약" class="headerlink" title="요약"></a>요약</h2><p>웹 사이트와 웹 도구들이 적절히 디자인되고 개발되었다면, 장애를 가진 사람들도 불편함없이 이를 사용할 수 있다. 그러나, 현재 많은 사이트와 도구들은 접근성에 대한 고려없이 개발되어 몇몇 사람들이 쉽게 사용할 수 없는 것이 현실이다. 접근성 높은 웹을 만드는 것은 개인과 산업 그리고 사회 전반을 이롭게한다. 국제 웹 표준은 이와 같은 접근성에 필요한 것들을 정의한다.</p>
-<h2 id="목차"><a href="#목차" class="headerlink" title="목차"></a>목차</h2><ul>
-<li>문맥에 대한 접근성(Accessibility in Context)</li>
-<li>웹 접근성이란 무엇인가?(What is Web Accessibility)</li>
-<li>접근성은 개인, 산업, 사회에게 모두 중요하다(Accessibility is Important for Individuals, Businesses, Society).</li>
-<li>접근성 높은 웹 구성하기(Making the Web Accessible)</li>
-<li>접근성 평가하기(Evaluating Accessibility)</li>
-<li>다양한 예시들(Examples)</li>
-<li>이외(For More Information)</li>
-</ul>
-<h2 id="문맥에-대한-접근"><a href="#문맥에-대한-접근" class="headerlink" title="문맥에 대한 접근"></a>문맥에 대한 접근</h2><blockquote>
-<p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.<br>웹의 힘은 그것의 보편성에 있다. 장애에 관계없이 누구나 접근할 수 있다는 것이 그 핵심이다.<br><em>Tim Berners-Lee(팀 버너스-리)</em></p>
-</blockquote>
-<p>웹은 본래 접근 장치(하드웨어, 소프트웨어)와 언어, 지역, 능력에 관계없이 모든 사람들이 사용할 수 있도록 고안되었다. 웹이 본래의 목적을 충족했을 때, 넓은 범위의 청각, 움직임, 시각 그리고 인지적 능력을 가진 사람들이 접근할 수 있다.</p>
-<p>웹은 실제 생활에서 많은 사람들이 경험할 수 있는 의사소통과 상호작용을 가로막는 장애를 제거하므로 장애가 사람에게 미치는 영향은 웹 상에서 급격히 달라졌다. 그러나 웹 사이트, 어플리케이션, 기술 그리고 도구들이 적절히 디자인되지 않는다면 그들은 사람들이 웹을 사용하는 데에 어려움을 느끼게 한다.</p>
-<h2 id="웹-접근성이란-무엇인가"><a href="#웹-접근성이란-무엇인가" class="headerlink" title="웹 접근성이란 무엇인가?"></a>웹 접근성이란 무엇인가?</h2><p>웹 접근성은 장애를 가진 사람들이 웹 사이트, 웹 도구들 그리고 기술이 이용할 수 있도록 고안되고 개발되었음을 의미한다. 구체적으로 사람들은</p>
-<ul>
-<li>웹 상에서 인지하고 이해하고 자유롭게 이용하고 사용작용할 수 있다.</li>
-<li>웹에 기여할 수 있다.</li>
-</ul>
-<p>웹 접근성은 웹 접근에 영향을 미치는</p>
-<ul>
-<li>청각적</li>
-<li>인지적</li>
-<li>신결학적</li>
-<li>신체적</li>
-<li>언어적</li>
-<li>시각적<br>장애를 포함한 모든 장애와 관련된다.</li>
-</ul>
-<p>웹 접근성은 또한 다음과 같은 비장애인에게도 도움을 준다. 예를 둘어:</p>
-<ul>
-<li>휴대폰, 스마트 워치, 스마트 tv 그리고 작은 화면과 다양한 입력모드를 가진 다른 장비를 사용하는 사람들</li>
-<li>노화로 인한 능력의 저하를 겪는 노인들</li>
-<li>발이 부러지거나 안경을 잃어버린 것과 같은 ‘일시적인 장애’를 가진 사람들</li>
-<li>밝은 태양빛 혹은 소리를 제대로 들을 수 없는 환경에 있는 ‘상황적 제약’을 경험하는 사람들</li>
-<li>느리거나 제한되거나 혹은 이용료가 비싼 인터넷 연결을 사용해야 하는 사람들</li>
-</ul>
-<h2 id="웹-접근성은-개인-산업-사회를-이롭게한다"><a href="#웹-접근성은-개인-산업-사회를-이롭게한다" class="headerlink" title="웹 접근성은 개인, 산업, 사회를 이롭게한다."></a>웹 접근성은 개인, 산업, 사회를 이롭게한다.</h2><p>웹은 삶의 많은 부분(교육, 일자리, 정부, 상업활동, 헬스케어, 놀이 등)에서 점점 그 중요성이 높아진 자원이다. 그러므로 웹이 다양한 범위의 능력을 가진 사람들에게 동등한 접근과 기회를 제공할 수 있도록 접근성이 높아야 한다는 것은 당연하다. 웹을 포함한 정보와 의사소통 기술에 대한 접근은 UN의 장애인의 권리에 관한 협약(<a target="_blank" rel="noopener" href="https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html">United Nations Convention on the Rights of Persons with Disabilities</a>)에<br>기본 인권으로 정의된다.</p>
-<p>웹은 장애를 가진 사람에게 정보에 대한 새로운 접근과 상호작용에 대한 가능성을 제공한다. 이는 활자, 소리, 시작 매체에 대한 접근 장벽인 웹 기술로 더욱 슆게 해결될 수 있음을 의미한다.</p>
-<p>접근성은 다음과 같은</p>
-<ul>
-<li>노인</li>
-<li>도서지역주민</li>
-<li>개발도상국민<br>을 포함하여 장애를 가진 사람의 사회참여를 독려한다.</li>
-</ul>
-<p>또한, 접근성과 관련된 견실한 산업이 발전할 수 있다. 전 섹션에서 살펴보았듯이, 접근성 높은 디자인은 전반적인 사용자 경험과 만족도를 높이고, 특히 다양한 상황에서 다양한 기기에 걸쳐 나이가 많은 사용자에게 편리함을 준다. 접근성은 브랜드 가치를 높이고 혁신을 이끌고 시장 확대의 기회를 준다. 웹 접근성은 많은 상황에서 법적으로 준수해야될 사항이다.</p>
-<h2 id="접근성-높은-웹-만들기"><a href="#접근성-높은-웹-만들기" class="headerlink" title="접근성 높은 웹 만들기"></a>접근성 높은 웹 만들기</h2><p>웹 접근성은 웹 기술, 브라우저와 다양한 ‘user agents’, 인가 도구, 그리고 웹사이트를 포함하여 함께 구동하는 부분들의 상호작용으로 가능하다.</p>
-<p>W3C 웹 접근성 운동(WAI)은 접근성을 증진시키는 기술 명세, 가이드라인, 기술 그리고 지원 자원을 발전시켜왔다. 이것들은 웹 접근성을 위한 국제 표준으로 자리잡았다; 예를 들어, WCAG(Web Content Accessibility Guidelines) 2.0은 ISO 표준 중 하나이다(ISO/IEC 40500).</p>
-<h3 id="접근성-높은-웹-사이트-구성하기"><a href="#접근성-높은-웹-사이트-구성하기" class="headerlink" title="접근성 높은 웹 사이트 구성하기"></a>접근성 높은 웹 사이트 구성하기</h3><p>접근성을 이루는 많은 요소들은 이해하고 적용하기 어렵지 않다. 접근성을 증진시키는 몇 가지 방안들은 더욱 복잡하고 적용하려면 깊은 지식이 필요하다.</p>
-<p>프로젝트를 시작할 때부터 접근성을 고려하여 구성하는 것이 효율적임과 동시에 효과적이다. 처음으로 돌아가 다시 하려고 하지 말아라.</p>
-<h2 id="접근성-평가하기"><a href="#접근성-평가하기" class="headerlink" title="접근성 평가하기"></a>접근성 평가하기</h2><p>웹 사이트를 개발하고 디자인할 때, 접근성 문제를 계속적으로 발견하고 쉽게 보완하기 위해 개발 초기뿐만 아니라 전 단계에서 꾸준히 평가해야 한다. 구동하는 브라우저 설정을 바꿔서 적용해보는 것과 같은 간단한 단계는 접근성의 몇가지 측면을 평가하는 데에 도움이 된다. 해당 웹사이트가 모든 접근성 가이드라인을 준수하는 가에 대한 종합적인 평가는 보다 많은 수고가 든다.</p>
-<p>접근성 평가를 도와주는 평가 도구들이 있다. 하지만 어떤 도구들도 독자적으로 해당 사이트가 접근성 가이드라인을 준수하는 지를 판단하는 것에는 한계가 있다. 접근성을 평가하는 데에는 반드시 인지 능력이 있는 사람의 평가가 수반되어야 한다.</p>
-<h2 id="예시"><a href="#예시" class="headerlink" title="예시"></a>예시</h2><h3 id="이미지-대체-텍스트"><a href="#이미지-대체-텍스트" class="headerlink" title="이미지 대체 텍스트"></a>이미지 대체 텍스트</h3><p>이미지는 마크업/코드에서 그에 상응하는 대체 텍스트를 가져야 한다.</p>
-<p>만약 대체 텍스트가 없으면, 그 이미지 정보는 전맹과 저시력자에게는 접근불가한 정보에 불가하다.</p>
-<p>대체 텍스트가 제공될 때, 이미지를 끈 사람들(인터넷 이용료가 비싸거나 인터넷 대역이 좁은 지역의)뿐만 아니라 전맹인 사람에게 이미지 정보는 제공될 수 있다. 이는 검색 엔진과 같이 이미지를 볼 수 없는 기술에서도 이용가능하다.</p>
-<h3 id="키보드-입력"><a href="#키보드-입력" class="headerlink" title="키보드 입력"></a>키보드 입력</h3><p>제한된 신체 능력을 가진 나이가 많은 사람을 포함한 몇 사람들은 마우스를 사용할 수 없다. 접근성이 높은 웹 사이트는 마우스에 의존하지 않고 키보드로 모든 기능을 사용할 수 있게 한다. 장애인들은 음성 인식 입력과 같은 키보드를 본뜬 보조 기구를 이용할 수 있다.</p>
-<h3 id="오디오를-위한-텍스트-정보"><a href="#오디오를-위한-텍스트-정보" class="headerlink" title="오디오를 위한 텍스트 정보"></a>오디오를 위한 텍스트 정보</h3><p>전맹인 사람이 이미지를 볼 수 없는 것과 같이 들을 수 없는 사람은 오디오 파일을 이용할 수 없다. 텍스트 정보를 제공하는 것은 소리를 이용하지 않는 검색 엔진과 다른 기술뿐만 아니라 청각 장애를 가진 사람들이 소리 정보에 접근할 수 있게 한다.</p>
-<p>웹 사이트가 텍스트 정보를 제공하는 것은 쉽고 많은 수고가 필요없다. 또한 텍스트 정보를 HTML 형식으로 변경해주는 서비스도 있다.</p>
-<h2 id="이외"><a href="#이외" class="headerlink" title="이외"></a>이외</h2><p>W3C WAI는 접근성 <a target="_blank" rel="noopener" href="https://www.w3.org/WAI/standards-guidelines/">표준</a>, <a target="_blank" rel="noopener" href="https://www.w3.org/WAI/teach-advocate/">교육</a>, <a target="_blank" rel="noopener" href="https://www.w3.org/WAI/test-evaluate/">테스트/평가</a>, <a target="_blank" rel="noopener" href="https://www.w3.org/WAI/planning/">프로젝트 관리 그리고 정책</a>에 대한 다양한 방면의 자원을 지원한다. 우리는 당신이 이 웹사이트를 보고, WAI Resources를 읽어보기를 바란다.</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://jack2ee-dev.github.io/2021/03/25/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Jack2ee-dev">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Jack2ee development blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/03/25/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-03-25 16:26:46" itemprop="dateCreated datePublished" datetime="2021-03-25T16:26:46+09:00">2021-03-25</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
